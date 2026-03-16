@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issues Tracker</title>
+
+    <!-- Daisy UI and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F8FAFC]">
+
+    
+    <header>
+      <div class="navbar bg-base-100 shadow-sm flex justify-between items-center px-4 md:px-8">
+        <div class="first-item">
+          <a class="flex items-center gap-2">
+            <img class="h-10" src="./assets/github-logo.png" alt="GitHub Logo" />
+            <h2 class="font-bold text-xl">GitHub Issues Tracker</h2>
+          </a>
+        </div>
+        
+        <div class="flex gap-3 items-center flex-wrap end-item">
+          <input
+            type="text"
+            placeholder="Search issues"
+            class="input input-bordered w-24 md:w-auto"
+          />
+          <button class="btn btn-primary">+ New Issue</button>
+        </div>
+      </div>
+    </header>
+
+    
+    <section class="btns flex flex-wrap items-start mx-auto bg-white shadow-sm">
+      <div class="flex flex-wrap items-center gap-3 p-4 md:p-8">
+        <button class="btn btn-primary">All</button>
+        <button class="btn btn-primary">Open</button>
+        <button class="btn btn-primary">Closed</button>
+      </div>
+    </section>
+
+    
+    <section class="bg-white px-4 md:px-8 py-4 md:py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div class="left-side flex flex-col gap-1">
+        <img src="./assets/Aperture.png" alt="Aperture Icon" class="h-8 w-8" />
+        <h2 class="font-bold text-xl">50 Issues</h2>
+        <p class="text-[#64748B] text-sm">Track and manage your project issues</p>
+      </div>
+      <div class="right-side flex gap-5">
+        <p class="flex items-center gap-1 text-sm">
+          <i class="fa-solid fa-circle text-[#00a96e]"></i> Open
+        </p>
+        <p class="flex items-center gap-1 text-sm">
+          <i class="fa-solid fa-circle text-[#a855f7]"></i> Closed
+        </p>
+      </div>
+    </section>
+
+    
+    <section id="all-cards" class="p-4 md:p-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+        
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex flex-col gap-3 border-t-4 border-t-[#00a96e]">
+          <div class="flex justify-between items-center">
+            <img src="./assets/Open-Status.png" alt="Open" class="h-5" />
+            <span class="text-red-500 text-xs font-semibold bg-red-100 border border-red-400 px-3 py-1 rounded-full">HIGH</span>
+          </div>
+          <div class="flex flex-col gap-2 flex-1">
+            <h2 class="font-semibold text-gray-800 text-sm leading-snug">Fix navigation menu on mobile devices</h2>
+            <p class="text-gray-500 text-xs leading-relaxed">The navigation menu doesn't collapse properly on mobile devices...</p>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <span class="text-red-500 text-xs font-semibold bg-red-100 border border-red-400 px-3 py-1 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-bug"></i> BUG
+              </span>
+              <span class="text-[#D97706] text-xs font-semibold bg-[#FFF8DB] border border-[#D97706] px-3 py-1 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-life-ring"></i> HELP WANTED
+              </span>
+            </div>
+          </div>
+          <hr class="border-gray-200" />
+          <div class="text-[#64748B] text-xs">
+            <p class="font-medium">#1 by john_doe</p>
+            <p>1/15/2024</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

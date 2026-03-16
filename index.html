@@ -1,40 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Issues Tracker</title>
     <!-- Daisy ui and Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class="bg-[#F8FAFC]  max-w-md  mx-auto">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F8FAFC] max-w-md mx-auto">
     <div class="header text-center items-center py-10">
-        <img class="mx-auto" src="./assets/github-logo.png" alt="">
-        <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
-        <p class="text-[#64748B]">Sign in to manage your issues</p>
+      <img class="mx-auto" src="./assets/github-logo.png" alt="" />
+      <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
+      <p class="text-[#64748B]">Sign in to manage your issues</p>
     </div>
     <div class="login-form">
-  <fieldset class="fieldset p-4">
-  <label class="label text-black">Username</label>
-  <input type="text" class="input" placeholder="Enter Username" />
+      <fieldset class="fieldset p-4">
+        <label class="label text-black">Username</label>
+        <input id="input-uname" type="text" class="input w-full" placeholder="Enter Username" />
 
-  <label class="label text-black">Password</label>
-  <input type="password" class="input" placeholder="Enter Password" />
-
-  <button class="btn btn-primary mt-4">Login</button>
-   </fieldset>
+        <label  class="label text-black">Password</label>
+        <input
+          type="password"
+          id="input-pass"
+          class="input w-full"
+          placeholder="Enter Password"/>
+        <button id="btn-login" class="btn btn-primary mt-4">Sign In</button>
+      </fieldset>
     </div>
-</body>
+    <hr class="text-[#E4E4E7] my-5" />
+    <div class="demo flex justify-center items-center">
+      <div style="text-align: center">
+        <p class="my-10">Demo Credentials:</p>
+        <div class="flex flex-col items-center py-8">
+          <p><span class="font-bold">Username: </span>admin</p>
+          <p><span class="font-bold">Password: </span>admin123</p>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
