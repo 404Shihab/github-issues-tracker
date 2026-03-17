@@ -28,6 +28,29 @@
   </head>
   <body class="bg-[#F8FAFC]">
 
+<dialog id="issue-modal" class="modal">
+  <div class="modal-box max-w-lg">
+    <h2 class="text-lg font-bold text-gray-800" id="modal-title"></h2>
+
+    <div class="flex items-center gap-3 mt-3">
+      <span id="modal-status" class="px-3 py-1 rounded-full text-xs font-semibold text-white"></span>
+      <p id="modal-author" class="text-xs text-gray-500"></p>
+    </div>
+    <div id="modal-labels" class="flex flex-wrap gap-2 mt-3"></div>
+    <p id="modal-desc" class="text-sm text-gray-500 leading-relaxed mt-3"></p>
+    <div class="flex items-center justify-between mt-4">
+      <p id="modal-assignee" class="text-sm text-gray-600"></p>
+      <span id="modal-priority" class="text-xs font-semibold px-3 py-1 rounded-full"></span>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
     
     <header>
       <div class="navbar bg-base-100 shadow-sm flex justify-between items-center px-4 md:px-8">
@@ -53,8 +76,8 @@
     <section class="btns flex flex-wrap items-start mx-auto bg-white shadow-sm">
       <div class="flex flex-wrap items-center gap-3 p-4 md:p-8">
         <button class="btn btn-primary">All</button>
-        <button class="btn btn-primary">Open</button>
-        <button class="btn btn-primary">Closed</button>
+        <button class="btn btn-outline btn-primary">Open</button>
+        <button class="btn btn-outline btn-primary">Closed</button>
       </div>
     </section>
 
@@ -62,7 +85,7 @@
     <section class="bg-white px-4 md:px-8 py-4 md:py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
       <div class="left-side flex flex-col gap-1">
         <img src="./assets/Aperture.png" alt="Aperture Icon" class="h-8 w-8" />
-        <h2 class="font-bold text-xl">50 Issues</h2>
+        <h2 class="font-bold text-xl issues-count">50 Issues</h2>
         <p class="text-[#64748B] text-sm">Track and manage your project issues</p>
       </div>
       <div class="right-side flex gap-5">
